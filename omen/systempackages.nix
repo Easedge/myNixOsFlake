@@ -28,6 +28,7 @@
     nixpkgs-fmt
     appimage-run
     distrobox
+    flatpak-builder
     # ios mobile
     libimobiledevice
     ifuse
