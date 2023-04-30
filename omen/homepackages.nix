@@ -12,6 +12,7 @@
     jetbrains.pycharm-community
     rustdesk
     element-desktop
+    drawio
     # nur
     # nur.repos.xxx
     # nixos-cn
