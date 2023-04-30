@@ -5,6 +5,7 @@
     # gnome
     gnome.gnome-tweaks
     gnome.dconf-editor
+    gnome.pomodoro
     gnomeExtensions.appindicator
     gnomeExtensions.vitals
     gnomeExtensions.docker

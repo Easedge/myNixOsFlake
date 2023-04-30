@@ -39,11 +39,14 @@ in
 
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia.prime = {
-    offload.enable = false;
+    # sync.enable = true;
+    # reverseSync.enable = true;
+    # allowExternalGpu = true;
+    offload.enable = true;
     intelBusId = "PCI:0:2:0";
     nvidiaBusId = "PCI:1:0:0";
   };
-  hardware.nvidia.modesetting.enable = true;
+  # hardware.nvidia.modesetting.enable = true;
   hardware.nvidia.powerManagement.enable = true;
   hardware.nvidia.nvidiaSettings = true;
   hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;

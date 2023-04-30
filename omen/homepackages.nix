@@ -5,11 +5,13 @@
     emacs
     htop
     neofetch
+    sdcv
     google-chrome
     microsoft-edge
     vscode-fhs
     jetbrains.pycharm-community
     rustdesk
+    element-desktop
     # nur
     # nur.repos.xxx
     # nixos-cn
