@@ -37,6 +37,9 @@
   };
 
   hardware.bluetooth.enable = true;
+  
+  # steam hardware
+  hardware.steam-hardware.enable = true;
 
   security.polkit.enable = true;
   services.gnome.gnome-keyring.enable = true;
