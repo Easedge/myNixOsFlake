@@ -9,6 +9,7 @@
       ./shellsettings.nix
       ./virtualisation.nix
       ./flatpak-bindfs.nix
+      ./gnome.nix
       ./nvidia.nix
       ./cuda.nix
     ];

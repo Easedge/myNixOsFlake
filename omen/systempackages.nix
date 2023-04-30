@@ -2,16 +2,6 @@
 
 {
   environment.systemPackages = with pkgs; [
-    # gnome
-    gnome.gnome-tweaks
-    gnome.dconf-editor
-    gnome.pomodoro
-    gnomeExtensions.appindicator
-    gnomeExtensions.vitals
-    gnomeExtensions.docker
-    gnomeExtensions.systemd-manager
-    gnomeExtensions.caffeine
-    gnomeExtensions.blur-my-shell
     # util
     tree
     tmux
@@ -24,6 +14,15 @@
     unrar
     unzip
     fuse
+    # complie
+    gcc
+    gnumake
+    autoconf
+    m4
+    util-linux
+    binutils
+    zlib
+    stdenv.cc
     coreutils
     nixfmt
     nixpkgs-fmt
@@ -33,18 +32,6 @@
     libimobiledevice
     ifuse
   ];
-
-  environment.gnome.excludePackages = with pkgs.gnome; [
-    epiphany
-    gnome-contacts
-    gnome-maps
-    geary
-  ];
-
-  programs.kdeconnect = {
-    enable = true;
-    package = pkgs.gnomeExtensions.gsconnect;
-  };
 
   programs.adb.enable = true;
 
