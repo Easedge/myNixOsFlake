@@ -13,6 +13,7 @@
     rustdesk
     element-desktop
     drawio
+    scrcpy
     # nur
     # nur.repos.xxx
     # nixos-cn
