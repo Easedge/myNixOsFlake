@@ -8,27 +8,24 @@
     wget
     curl
     fd
-    clang
     ripgrep
     p7zip
     unrar
     unzip
     fuse
+    appimage-run
     # complie
     gcc
+    clang
     gnumake
+    cmake
     autoconf
     m4
     util-linux
     binutils
-    zlib
-    stdenv.cc
     coreutils
     nixfmt
     nixpkgs-fmt
-    appimage-run
-    distrobox
-    flatpak-builder
     # ios mobile
     libimobiledevice
     ifuse
