@@ -49,13 +49,13 @@
     nixosConfigurations."omen" = nixpkgs.lib.nixosSystem {
       inherit pkgs system;
       modules = [
-        ./omen/configuration.nix
+        ./omen/host/configuration.nix
 
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.junglefish = import ./omen/home.nix;
+          home-manager.users.junglefish = import ./omen/home/home.nix;
         }
 
         hardware.nixosModules.common-cpu-intel
