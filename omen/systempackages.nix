@@ -15,6 +15,7 @@
     fuse
     # complie
     gcc
+    gdb
     gnumake
     nixfmt
     nixpkgs-fmt
