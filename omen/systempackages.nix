@@ -13,22 +13,14 @@
     unrar
     unzip
     fuse
-    appimage-run
     # complie
     gcc
-    clang
     gnumake
-    cmake
-    autoconf
-    m4
-    util-linux
-    binutils
-    coreutils
     nixfmt
     nixpkgs-fmt
     # ios mobile
-    libimobiledevice
     ifuse
+    libimobiledevice
   ];
 
   programs.adb.enable = true;

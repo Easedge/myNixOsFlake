@@ -5,6 +5,7 @@
     emacs
     htop
     neofetch
+    appimage-run
     sdcv
     google-chrome
     microsoft-edge
