@@ -12,14 +12,13 @@
     p7zip
     unrar
     unzip
-    fuse
     # complie
     gcc
     gdb
     gnumake
     nixfmt
     nixpkgs-fmt
-    # ios mobile
+    # mobile
     ifuse
     libimobiledevice
   ];
