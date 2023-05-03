@@ -6,11 +6,14 @@
     gnome.dconf-editor
     gnome.pomodoro
     gnomeExtensions.appindicator
+    gnomeExtensions.tray-icons-reloaded
     gnomeExtensions.vitals
     gnomeExtensions.docker
     gnomeExtensions.systemd-manager
     gnomeExtensions.caffeine
     gnomeExtensions.blur-my-shell
+    gnomeExtensions.pano
+    gnomeExtensions.desktop-icons-ng-ding
   ];
 
   environment.gnome.excludePackages = with pkgs.gnome; [
