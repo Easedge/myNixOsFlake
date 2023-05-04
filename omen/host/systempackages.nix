@@ -4,11 +4,8 @@
   environment.systemPackages = with pkgs; [
     # util
     tree
-    tmux
     wget
     curl
-    fd
-    ripgrep
     p7zip
     unrar
     unzip
