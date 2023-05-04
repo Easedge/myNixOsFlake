@@ -11,10 +11,15 @@
   ];
 
   environment.gnome.excludePackages = with pkgs.gnome; [
+    yelp
+    geary
+    totem
+    cheese
     epiphany
     gnome-contacts
+    gnome-music
     gnome-maps
-    geary
+    gnome-initial-setup
   ];
 
   programs.kdeconnect = {
