@@ -12,6 +12,8 @@
 
   environment.gnome.excludePackages = with pkgs; [
     gnome-photos
+    gnome-tour
+    gnome-user-docs
     gnome.yelp
     gnome.geary
     gnome.totem
@@ -20,7 +22,7 @@
     gnome.gnome-contacts
     gnome.gnome-music
     gnome.gnome-maps
-    gnome.gnome-initial-setup
+    
   ];
 
   programs.kdeconnect = {
