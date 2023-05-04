@@ -3,10 +3,10 @@
 {
   environment.systemPackages = with pkgs; [
     gnome.pomodoro
+    gnomeExtensions.pano
     gnomeExtensions.vitals
     gnomeExtensions.caffeine
     gnomeExtensions.blur-my-shell
-    gnomeExtensions.pano
     gnomeExtensions.tiling-assistant
   ];
 
