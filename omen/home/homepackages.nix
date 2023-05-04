@@ -3,8 +3,8 @@
 {
   home.packages = with pkgs; [
     htop
-    neofetch
     sdcv
+    vscode-fhs
     rustdesk
     drawio
     scrcpy
@@ -27,23 +27,13 @@
   
   programs.emacs = {
     enable = true;
-    package = [
-      pkgs.emacs
-    ];
     extraConfig = ''
     '';
-    extraPackages = [];
+    # extraPackages = [];
   };
   
   services.emacs = {
     enable = true;
-  };
-  
-  programs.vscode = {
-    enable = true;
-    package = [
-      pkgs.vscode-fhs
-    ];
   };
 
   programs.git = {
