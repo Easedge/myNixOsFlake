@@ -20,6 +20,24 @@
     vimAlias = true;
     vimdiffAlias = true;
   };
+  
+  programs.tmux = {
+    enable = true;
+  };
+  
+  programs.emacs = {
+    enable = true;
+    package = [
+      pkgs.emacs
+    ];
+    extraConfig = ''
+    '';
+    extraPackages = [];
+  };
+  
+  services.emacs = {
+    enable = true;
+  };
 
   programs.git = {
     enable = true;
