@@ -22,7 +22,6 @@
     gnome.gnome-contacts
     gnome.gnome-music
     gnome.gnome-maps
-    
   ];
 
   programs.kdeconnect = {
