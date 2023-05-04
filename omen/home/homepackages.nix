@@ -2,17 +2,11 @@
 
 {
   home.packages = with pkgs; [
-    emacs
     htop
     neofetch
     appimage-run
     sdcv
-    google-chrome
-    microsoft-edge
-    vscode-fhs
-    jetbrains.pycharm-community
     rustdesk
-    element-desktop
     drawio
     scrcpy
     # nur
