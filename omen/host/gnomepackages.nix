@@ -2,13 +2,8 @@
 
 {
   environment.systemPackages = with pkgs; [
-    gnome.gnome-tweaks
-    gnome.dconf-editor
     gnome.pomodoro
-    gnomeExtensions.appindicator
     gnomeExtensions.vitals
-    gnomeExtensions.docker
-    gnomeExtensions.systemd-manager
     gnomeExtensions.caffeine
     gnomeExtensions.blur-my-shell
     gnomeExtensions.pano
