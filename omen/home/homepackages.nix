@@ -4,7 +4,6 @@
   home.packages = with pkgs; [
     htop
     neofetch
-    appimage-run
     sdcv
     rustdesk
     drawio
