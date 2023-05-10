@@ -21,6 +21,12 @@
   ];
 
   programs.adb.enable = true;
+  
+  programs.kdeconnect = {
+    enable = true;
+    # package = pkgs.gnomeExtensions.gsconnect;
+    package = pkgs.plasma5Packages.kdeconnect-kde;
+  };
 
   services.usbmuxd = {
     enable = true;
