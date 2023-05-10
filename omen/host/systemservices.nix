@@ -23,9 +23,11 @@
   xdg.portal.xdgOpenUsePortal = true;
 
   services.udev.packages = with pkgs; [
-    gnome.gnome-settings-daemon
+    # gnome.gnome-settings-daemon
     android-udev-rules
   ];
+  
+  services.hardware.bolt.enable = true;
 
   sound.enable = true;
   hardware.pulseaudio.enable = false;
