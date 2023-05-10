@@ -16,7 +16,10 @@
   services.printing.enable = true;
 
   xdg.portal.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal];
+  xdg.portal.extraPortals = [
+    pkgs.xdg-desktop-portal
+    # pkgs.xdg-desktop-portal-gtk
+  ];
   xdg.portal.xdgOpenUsePortal = true;
 
   services.udev.packages = with pkgs; [
