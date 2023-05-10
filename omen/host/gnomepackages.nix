@@ -23,9 +23,4 @@
     gnome.gnome-music
     gnome.gnome-maps
   ];
-
-  programs.kdeconnect = {
-    enable = true;
-    package = pkgs.gnomeExtensions.gsconnect;
-  };
 }
