@@ -1,7 +1,6 @@
 { config, pkgs, ...}:
 
 {
-  services.xserver.enable = true;
   services.xserver.layout = "cn";
   services.xserver.excludePackages = [ pkgs.xterm ];
   services.xserver.libinput.enable = true;
