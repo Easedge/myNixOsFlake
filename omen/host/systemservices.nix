@@ -14,7 +14,7 @@
 
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [
-    pkgs.xdg-desktop-portal
+    pkgs.xdg-desktop-portal-gtk
   ];
   xdg.portal.xdgOpenUsePortal = true;
 
@@ -22,8 +22,6 @@
     # gnome.gnome-settings-daemon
     android-udev-rules
   ];
-  
-  services.hardware.bolt.enable = true;
 
   sound.enable = true;
   hardware.pulseaudio.enable = false;
@@ -38,9 +36,6 @@
   };
 
   hardware.bluetooth.enable = true;
-  
-  # steam hardware
-  # hardware.steam-hardware.enable = true;
 
   security.polkit.enable = true;
   
