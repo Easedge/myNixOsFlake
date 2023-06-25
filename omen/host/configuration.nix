@@ -43,45 +43,35 @@
   };
 
   fonts = {
-    enableDefaultFonts = true;
+    enableDefaultFonts = false;
+    fontDir.enable = true;
+
     fonts = with pkgs; [
+      material-design-icons
+      font-awesome
       noto-fonts
       noto-fonts-cjk
-      noto-fonts-cjk-sans
-      noto-fonts-cjk-serif
       noto-fonts-emoji
       noto-fonts-extra
-      sarasa-gothic
-      font-awesome
-      symbola
+      source-sans
+      source-serif
+      source-han-sans
+      source-han-serif
       (nerdfonts.override {
         fonts = [
           "FiraCode"
-          "Noto"
+          "JetBrainsMono"
+          "Iosevka"
         ];
       })
     ];
-    fontconfig = {
-      defaultFonts = {
-        emoji = [
-          "Noto Color Emoji"
-        ];
-        monospace = [
-          "Noto Sans Mono CJK SC"
-        ];
-        sansSerif = [
-          "NotoSans Nerd Font"
-          "Sarasa Gothic SC"
-        ];
-        serif = [
-          "Noto Serif CJK SC"
-          "NotoSerif Nerd Font"
-        ];
-      };
-      cache32Bit = true;
+
+    fontconfig.defaultFonts = {
+      serif = [ "Noto Serif" "Noto Color Emoji" ];
+      sansSerif = [ "Noto Sans" "Noto Color Emoji" ];
+      monospace = [ "JetBrainsMono Nerd Font" "Noto Color Emoji" ];
+      emoji = [ "Noto Color Emoji" ];
     };
-    fontDir.enable = true;
-    enableGhostscriptFonts = true;
   };
 
   users.users.junglefish = {
