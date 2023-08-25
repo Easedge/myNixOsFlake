@@ -1,0 +1,3 @@
+# ignore ALL files in ANY directory named direnv
+.direnv/
+# flake.lock
