@@ -10,6 +10,8 @@
     google-chrome
     firefox
     thunderbird
+    telegram-desktop
+    spotify
     scrcpy
     # teamviewer rustdesk todesk
   ];

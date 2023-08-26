@@ -1,7 +1,6 @@
 { pkgs, ... }:
 
 {
-  # this is needed to get a bridge with DHCP enabled
   virtualisation = {
 
     libvirtd = {
@@ -10,7 +9,14 @@
       qemu.swtpm.enable = true;
       qemu.runAsRoot = true;
       qemu.package = pkgs.qemu_kvm;
+      qemu.verbatimConfig = ''
+        nvram = [ "${pkgs.OVMF}/FV/OVMF.fd:${pkgs.OVMF}/FV/OVMF_VARS.fd" ]
+      '';
+      onBoot = "ignore";
+      onShutdown = "shutdown";
     };
+
+    spiceUSBRedirection.enable = true;
 
     oci-containers.backend = "docker";
 
@@ -30,6 +36,21 @@
 
   };
 
+  # systemd.tmpfiles.rules = [
+  #   "f /dev/shm/scream 0660 junglefish qemu-libvirtd -"
+  #   "f /dev/shm/looking-glass 0660 junglefish qemu-libvirtd -"
+  # ];
+
+  # systemd.user.services.scream-ivshmem = {
+  #   enable = true;
+  #   description = "Scream IVSHMEM";
+  #   serviceConfig = {
+  #     ExecStart = "${pkgs.scream-receivers}/bin/scream-ivshmem-pulse /dev/shm/scream";
+  #     Restart = "always";
+  #   };
+  #   wantedBy = [ "multi-user.target" ];
+  #   requires = [ "pulseaudio.service" ];
+  # };
 
   environment.systemPackages = with pkgs; [
     virt-manager

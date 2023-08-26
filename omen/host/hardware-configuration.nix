@@ -7,12 +7,14 @@
     ];
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usbhid" "usb_storage" "sd_mod" "sdhci_pci" ];
-  boot.initrd.kernelModules = [ ];
-  boot.kernelPackages = pkgs.stable.linuxKernel.packages.linux_zen;
-  boot.kernelParams = [ ];
+  boot.initrd.kernelModules = [ "vfio_pci" "vfio" "vfio_iommu_type1" "vfio_virqfd" ];
+  # boot.kernelPackages = pkgs.stable.linuxKernel.packages.linux_zen;
+  boot.kernelParams = [ "intel_iommu=on" "iommu=pt" ];
   boot.kernelPatches = [ ];
   boot.kernelModules = [ "kvm-intel" ];
+  boot.blacklistedKernelModules = [ "nvidia" "nouveau" ];
   boot.extraModulePackages = [ ];
+  boot.extraModprobeConfig = "options vfio-pci ids=10de:2520,10de:228e";
 
   fileSystems."/" =
     {
@@ -35,5 +37,6 @@
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
+  hardware.opengl.enable = true;
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
