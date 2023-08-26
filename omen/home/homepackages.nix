@@ -11,6 +11,7 @@
     # code
     vscode-fhs
     jetbrains.pycharm-community
+    jetbrains.idea-community
     nixpkgs-fmt
     # common desktop software
     google-chrome
