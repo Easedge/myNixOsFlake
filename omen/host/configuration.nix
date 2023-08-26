@@ -46,6 +46,7 @@
   fonts = {
     enableDefaultPackages = false;
     fontDir.enable = true;
+    fontconfig.enable = true;
 
     packages = with pkgs; [
       material-design-icons
