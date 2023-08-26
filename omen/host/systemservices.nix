@@ -37,11 +37,11 @@
   };
 
   hardware.bluetooth.enable = true;
-
   security.polkit.enable = true;
-
   services.fwupd.enable = true;
   services.openssh.enable = true;
   services.flatpak.enable = true;
   services.v2raya.enable = true;
+  programs.steam.enable = true;
+  hardware.steam-hardware.enable = true;
 }
