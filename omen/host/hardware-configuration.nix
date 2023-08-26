@@ -14,7 +14,7 @@
   boot.kernelModules = [ "kvm-intel" ];
   # boot.blacklistedKernelModules = [ "nvidia" "nouveau" ];
   boot.extraModulePackages = [ ];
-  boot.extraModprobeConfig = "options vfio-pci ids=10de:2520,10de:228e";
+  # boot.extraModprobeConfig = "options vfio-pci ids=10de:2520,10de:228e";
 
   fileSystems."/" =
     {
