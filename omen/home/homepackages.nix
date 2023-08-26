@@ -3,22 +3,28 @@
 {
   home.packages = with pkgs; [
     # pkgs.stable.xxx
-    nixpkgs-fmt
+    # utils
     neofetch
     htop
     sdcv
+    scrcpy
+    # code
     vscode-fhs
+    jetbrains.pycharm-community
+    nixpkgs-fmt
+    # common desktop software
     google-chrome
     firefox
     thunderbird
-    telegram-desktop
-    spotify
-    scrcpy
     qq
-    lutris
+    telegram-desktop
+    element-desktop
+    spotify
     libreoffice-qt
     obs-studio
     gimp
+    # game
+    lutris
     # teamviewer rustdesk todesk
   ];
 }
