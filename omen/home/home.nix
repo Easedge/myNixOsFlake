@@ -3,6 +3,7 @@
 {
   imports = [
     ./homepackages.nix
+    ./programs
   ];
 
   nixpkgs = {
