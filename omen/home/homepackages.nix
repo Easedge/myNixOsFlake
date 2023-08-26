@@ -4,6 +4,7 @@
   home.packages = with pkgs; [
     # pkgs.stable.xxx
     nixpkgs-fmt
+    neofetch
     htop
     sdcv
     vscode-fhs
@@ -13,6 +14,11 @@
     telegram-desktop
     spotify
     scrcpy
+    qq
+    lutris
+    libreoffice-qt
+    obs-studio
+    gimp
     # teamviewer rustdesk todesk
   ];
 }
