@@ -2,10 +2,10 @@
 {
   fonts = {
     enableDefaultPackages = false;
-    fontDir.enable = true;
-    fontconfig.enable = true;
 
     packages = with pkgs; [
+      corefonts
+      ubuntu_font_family
       material-design-icons
       font-awesome
       noto-fonts
@@ -20,6 +20,10 @@
         ];
       })
     ];
+
+    fontDir.enable = true;
+    fontconfig.enable = true;
+    fonts.fontconfig.cache32Bit = true;
 
     fontconfig.defaultFonts = {
       serif = [ "Noto Serif" "Noto Color Emoji" ];
