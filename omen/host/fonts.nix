@@ -1,4 +1,4 @@
-{ config, pkgs, . ... }:
+{ config, pkgs, ... }:
 {
   fonts = {
     enableDefaultPackages = false;
@@ -12,11 +12,6 @@
       noto-fonts-cjk
       noto-fonts-emoji
       noto-fonts-extra
-      source-sans
-      source-serif
-      source-han-sans
-      source-han-serif
-      wqy_zenhei
       (nerdfonts.override {
         fonts = [
           "FiraCode"
@@ -27,9 +22,9 @@
     ];
 
     fontconfig.defaultFonts = {
-      serif = [ "Source Han Serif" "Noto Color Emoji" ];
-      sansSerif = [ "Noto Sans CJK SC" "Noto Color Emoji" ];
-      monospace = [ "Source Han Mono" "Noto Color Emoji" ];
+      serif = [ "Noto Serif" "Noto Color Emoji" ];
+      sansSerif = [ "Noto Sans" "Noto Color Emoji" ];
+      monospace = [ "JetBrainsMono Nerd Font" "Noto Color Emoji" ];
       emoji = [ "Noto Color Emoji" ];
     };
   };
