@@ -1,8 +1,6 @@
 { config, pkgs, ... }:
 {
   fonts = {
-    enableDefaultPackages = false;
-
     packages = with pkgs; [
       corefonts
       ubuntu_font_family
@@ -25,11 +23,12 @@
     fontconfig.enable = true;
     fontconfig.cache32Bit = true;
 
-    fontconfig.defaultFonts = {
-      serif = [ "Noto Serif" "Noto Color Emoji" ];
-      sansSerif = [ "Noto Sans" "Noto Color Emoji" ];
-      monospace = [ "JetBrainsMono Nerd Font" "Noto Color Emoji" ];
-      emoji = [ "Noto Color Emoji" ];
-    };
+    # enableDefaultPackages = false;
+    # fontconfig.defaultFonts = {
+    #   serif = [ "Noto Serif" "Noto Color Emoji" ];
+    #   sansSerif = [ "Noto Sans" "Noto Color Emoji" ];
+    #   monospace = [ "JetBrainsMono Nerd Font" "Noto Color Emoji" ];
+    #   emoji = [ "Noto Color Emoji" ];
+    # };
   };
 }
