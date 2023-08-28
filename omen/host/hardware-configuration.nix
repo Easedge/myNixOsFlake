@@ -31,12 +31,11 @@
   swapDevices =
     [{ device = "/dev/disk/by-label/SWAP"; }];
 
+  zramSwap.enable = true;
+
   networking.useDHCP = lib.mkDefault true;
   networking.interfaces.eno1.useDHCP = lib.mkDefault true;
   networking.interfaces.wlo1.useDHCP = lib.mkDefault true;
-
-  zramSwap.enable = true;
-  services.zram-generator.enable = true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
