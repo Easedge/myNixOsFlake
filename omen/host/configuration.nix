@@ -9,7 +9,6 @@
       ./shellsettings.nix
       ./virtualisation.nix
       ./fonts.nix
-      ./steam.nix
       ./flatpak-bindfs.nix
       # ./gnomepackages.nix
       ./plasmapackages.nix

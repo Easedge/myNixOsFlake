@@ -24,8 +24,6 @@
     libreoffice-qt
     obs-studio
     gimp
-    # game
-    lutris
     # teamviewer rustdesk todesk
   ];
 }
