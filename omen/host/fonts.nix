@@ -23,12 +23,12 @@
     fontconfig.enable = true;
     fontconfig.cache32Bit = true;
 
-    # enableDefaultPackages = false;
-    # fontconfig.defaultFonts = {
-    #   serif = [ "Noto Serif" "Noto Color Emoji" ];
-    #   sansSerif = [ "Noto Sans" "Noto Color Emoji" ];
-    #   monospace = [ "JetBrainsMono Nerd Font" "Noto Color Emoji" ];
-    #   emoji = [ "Noto Color Emoji" ];
-    # };
+    enableDefaultPackages = true;
+    fontconfig.defaultFonts = {
+      serif = [ "Noto Serif" "Noto Color Emoji" ];
+      sansSerif = [ "Noto Sans" "Noto Color Emoji" ];
+      monospace = [ "JetBrainsMono Nerd Font" "Noto Color Emoji" ];
+      emoji = [ "Noto Color Emoji" ];
+    };
   };
 }

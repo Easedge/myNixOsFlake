@@ -2,12 +2,12 @@
 {
   programs = {
     steam = {
-      enable = true;
-      package = pkgs.steam.override {
-        extraPkgs = p: with p; [
-          wqy_zenhei
-        ];
-      };
+      enable = false;
+      # package = pkgs.steam.override {
+      #   extraPkgs = p: with p; [
+      #     wqy_zenhei
+      #   ];
+      # };
     };
   };
   hardware.steam-hardware.enable = true;
