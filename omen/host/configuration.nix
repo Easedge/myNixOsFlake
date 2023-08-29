@@ -14,6 +14,7 @@
       ./plasmapackages.nix
       ./nvidia.nix
       ./cuda.nix
+      ./steam.nix
     ];
 
   boot.loader.systemd-boot.enable = true;

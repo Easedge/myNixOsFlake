@@ -7,6 +7,5 @@
     ./git.nix
     ./neovim.nix
     ./tmux.nix
-    ./steam.nix
   ];
 }
