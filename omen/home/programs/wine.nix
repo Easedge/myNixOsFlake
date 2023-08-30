@@ -2,6 +2,10 @@
 
 {
   home.packages = with pkgs; [
+    xdelta
+    lutris
+
+
     # support both 32- and 64-bit applications
     wineWowPackages.stable
 
