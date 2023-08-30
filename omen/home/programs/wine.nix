@@ -3,7 +3,7 @@
 {
   home.packages = with pkgs; [
     # support both 32- and 64-bit applications
-    # wineWowPackages.stable
+    wineWowPackages.stable
 
     # support 32-bit only
     # wine
@@ -18,6 +18,6 @@
     winetricks
 
     # native wayland support (unstable)
-    wineWowPackages.waylandFull
+    # wineWowPackages.waylandFull
   ];
 }
