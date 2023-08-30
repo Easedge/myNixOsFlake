@@ -10,6 +10,7 @@
       noto-fonts-cjk
       noto-fonts-emoji
       noto-fonts-extra
+      wqy_zenhei
       (nerdfonts.override {
         fonts = [
           "FiraCode"
@@ -20,8 +21,8 @@
     ];
 
     fontDir.enable = true;
-    # fontconfig.enable = true;
-    # fontconfig.cache32Bit = true;
+    fontconfig.enable = true;
+    fontconfig.cache32Bit = true;
 
     # enableDefaultPackages = true;
     # fontconfig.defaultFonts = {
