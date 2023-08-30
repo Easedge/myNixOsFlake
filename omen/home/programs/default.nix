@@ -7,6 +7,6 @@
     ./git.nix
     ./neovim.nix
     ./tmux.nix
-    ./wine.nix
+    # ./wine.nix
   ];
 }
