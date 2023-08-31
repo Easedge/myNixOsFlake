@@ -15,6 +15,7 @@
       ./nvidia.nix
       ./cuda.nix
       ./steam.nix
+      ./teamviewer.nix
     ];
 
   boot.loader.systemd-boot.enable = true;

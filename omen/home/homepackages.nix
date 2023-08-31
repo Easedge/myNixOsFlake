@@ -25,6 +25,5 @@
     obs-studio
     gimp
     bottles
-    teamviewer # rustdesk todesk
   ];
 }
