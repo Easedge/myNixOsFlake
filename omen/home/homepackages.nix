@@ -8,6 +8,8 @@
     htop
     sdcv
     scrcpy
+    fd
+    ripgrep
     # code
     vscode-fhs
     jetbrains.pycharm-community
