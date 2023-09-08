@@ -10,7 +10,6 @@
     scrcpy
     fd
     ripgrep
-    jupyter
     # code
     vscode-fhs
     jetbrains.pycharm-community
