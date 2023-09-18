@@ -10,9 +10,11 @@
     };
     hardware.url = "github:nixos/nixos-hardware";
     nur.url = "github:nix-community/NUR";
+    emacs-overlay.url = "github.com/nix-community/emacs-overlay";
+    daeuniverse.url = "github:daeuniverse/flake.nix";
   };
 
-  outputs = { self, nixpkgs, home-manager, nur, hardware, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nur, hardware, emacs-overlay, daeuniverse, ... }@inputs:
     let
       inherit (self) outputs;
       forAllSystems = nixpkgs.lib.genAttrs [
@@ -60,6 +62,9 @@
             hardware.nixosModules.common-gpu-intel
             hardware.nixosModules.common-pc-laptop
             hardware.nixosModules.common-pc-ssd
+
+            daeuniverse.nixosModules.dae
+            daeuniverse.nixosModules.daed
           ];
         };
       };
