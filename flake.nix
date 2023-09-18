@@ -10,11 +10,10 @@
     };
     hardware.url = "github:nixos/nixos-hardware";
     nur.url = "github:nix-community/NUR";
-    emacs-overlay.url = "github.com/nix-community/emacs-overlay";
     daeuniverse.url = "github:daeuniverse/flake.nix";
   };
 
-  outputs = { self, nixpkgs, home-manager, nur, hardware, emacs-overlay, daeuniverse, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nur, hardware, daeuniverse, ... }@inputs:
     let
       inherit (self) outputs;
       forAllSystems = nixpkgs.lib.genAttrs [
