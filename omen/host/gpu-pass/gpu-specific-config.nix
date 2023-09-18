@@ -35,7 +35,10 @@ in
       ("vfio-pci.ids=" + lib.concatStringsSep "," gpuIDs) # vfio devices
     ];
 
-    boot.blacklistedKernelModules = [ "nvidia" "nouveau" ];
+    boot.blacklistedKernelModules = [
+      "nvidia"
+      #"nouveau"
+    ];
 
     # Xpad affects the work of the xbox controller and its wireless adapter
     # The xpad will shake hands with the handle/wireless adapter when it is plugged in. At this time, 

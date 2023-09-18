@@ -7,7 +7,7 @@
     ];
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usbhid" "usb_storage" "sd_mod" "sdhci_pci" ];
-  boot.kernelParams = [ "intel_iommu=on" "intel_iommu=pt" ];
+  boot.kernelParams = [ "intel_iommu=on" "iommu=pt" ];
   boot.kernelPatches = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
