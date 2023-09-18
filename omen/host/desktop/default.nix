@@ -5,6 +5,5 @@
     ./flatpak-bindfs.nix
     # ./gnomepackages.nix
     ./plasmapackages.nix
-    ./nvidia.nix
   ];
 }

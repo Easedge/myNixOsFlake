@@ -8,14 +8,14 @@ let
     "10de:2520" # Graphics
     "10de:228e" # Audio
   ];
-in 
+in
 { lib, ... }:
 {
   specialisation."GPUPaththrough".configuration = {
-    system.nixos.tags = [ 
+    system.nixos.tags = [
       "Nvidia-GPU-VFIO"
       # "NoXpad"
-      ];
+    ];
 
     # The vfio modules before the nvidia modules is very intentional because it lets vfio claim my GPU before nvidia does.
     boot.initrd.kernelModules = [
@@ -24,16 +24,18 @@ in
       "vfio"
       "vfio_iommu_type1"
       # Built into kernel at linux 6.2
-      "vfio_virqfd"
+      # "vfio_virqfd"
       # If you load nvidia driver in initrd, you need specific vfio load before nvidia driver
       # "nvidia"
       # "nvidia_modeset"
       # "nvidia_uvm"
       # "nvidia_drm"
     ];
-    boot.kernelParams = [ 
+    boot.kernelParams = [
       ("vfio-pci.ids=" + lib.concatStringsSep "," gpuIDs) # vfio devices
     ];
+
+    boot.blacklistedKernelModules = [ "nvidia" "nouveau" ];
 
     # Xpad affects the work of the xbox controller and its wireless adapter
     # The xpad will shake hands with the handle/wireless adapter when it is plugged in. At this time, 
@@ -44,5 +46,6 @@ in
 
     # Now using libvirt hooks to unload xpad dynamicly
     # boot.blacklistedKernelModules = [ "xpad" ];
+
   };
 }

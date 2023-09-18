@@ -7,11 +7,10 @@
     ];
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usbhid" "usb_storage" "sd_mod" "sdhci_pci" ];
-  # boot.kernelPackages = pkgs.stable.linuxKernel.packages.linux_zen;
-  boot.kernelParams = [ "intel_iommu=on" "iommu=pt" ];
+  boot.kernelPackages = pkgs.stable.linuxKernel.packages.linux_zen;
+  boot.kernelParams = [ "intel_iommu=pt" ];
   boot.kernelPatches = [ ];
   boot.kernelModules = [ "kvm-intel" ];
-  # boot.blacklistedKernelModules = [ "nvidia" "nouveau" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
@@ -34,7 +33,6 @@
   networking.useDHCP = lib.mkDefault true;
   networking.interfaces.eno1.useDHCP = lib.mkDefault true;
   networking.interfaces.wlo1.useDHCP = lib.mkDefault true;
-  networking.bridges.br4kvm.interfaces = [ "eno1" "wlo1" ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";

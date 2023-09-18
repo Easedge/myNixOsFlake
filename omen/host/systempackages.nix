@@ -18,6 +18,7 @@
     lsof # list open files
     # system tools
     ethtool
+    bridge-utils
     pciutils # lspci
     usbutils # lsusb
     # complie
