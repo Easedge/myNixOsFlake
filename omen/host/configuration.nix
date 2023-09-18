@@ -10,6 +10,7 @@
       ./virtualisation.nix
       ./desktop
       ./programs
+      ./nvidia
       ./gpu-pass
     ];
 
