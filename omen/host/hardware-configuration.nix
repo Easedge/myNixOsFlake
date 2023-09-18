@@ -34,6 +34,7 @@
   networking.useDHCP = lib.mkDefault true;
   networking.interfaces.eno1.useDHCP = lib.mkDefault true;
   networking.interfaces.wlo1.useDHCP = lib.mkDefault true;
+  networking.bridges.br4kvm.interfaces = [ "eno1" "wlo1" ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
