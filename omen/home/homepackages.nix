@@ -23,9 +23,9 @@
     telegram-desktop
     element-desktop
     spotify
-    libreoffice-qt
-    obs-studio
+    # libreoffice-qt
+    # obs-studio
     gimp
-    bottles
+    # bottles
   ];
 }

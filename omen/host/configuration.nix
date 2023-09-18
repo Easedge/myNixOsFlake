@@ -8,14 +8,8 @@
       ./systempackages.nix
       ./shellsettings.nix
       ./virtualisation.nix
-      ./fonts.nix
-      ./flatpak-bindfs.nix
-      # ./gnomepackages.nix
-      ./plasmapackages.nix
-      ./nvidia.nix
-      ./cuda.nix
-      ./steam.nix
-      ./teamviewer.nix
+      ./desktop
+      ./programs
       ./gpu-pass
     ];
 

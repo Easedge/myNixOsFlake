@@ -2,7 +2,6 @@
 {
   imports = [
     ./gpu-specific-config.nix
-    # ./hooks.nix
   ];
 
   # boot.kernelParams = [ 
