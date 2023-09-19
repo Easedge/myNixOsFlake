@@ -24,7 +24,7 @@ in
       "vfio"
       "vfio_iommu_type1"
       # Built into kernel at linux 6.2
-      "vfio_virqfd"
+      # "vfio_virqfd"
       # If you load nvidia driver in initrd, you need specific vfio load before nvidia driver
       # "nvidia"
       # "nvidia_modeset"
@@ -35,9 +35,18 @@ in
       ("vfio-pci.ids=" + lib.concatStringsSep "," gpuIDs) # vfio devices
     ];
 
+    boot.initrd.availableKernelModules = [ "i915" "vfio-pci" ];
+    boot.initrd.preDeviceCommands = ''
+      DEVS="0000:01:00.0 0000:01:00.1"
+      for DEV in $DEVS; do
+        echo "vfio-pci" > /sys/bus/pci/devices/$DEV/driver_override
+      done
+      modprobe -i vfio-pci
+    '';
+
     boot.blacklistedKernelModules = [
-      "nvidia"
-      #"nouveau"
+      # "nvidia"
+      "nouveau"
     ];
 
     # Xpad affects the work of the xbox controller and its wireless adapter
