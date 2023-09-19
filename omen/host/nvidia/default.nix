@@ -1,39 +1,23 @@
 { lib, config, pkgs, ... }:
 {
   imports = [
-    ./off-load.nix
     # ./disable.nix
     # ./open.nix
   ];
 
   services.xserver.videoDrivers = lib.mkDefault [ "nvidia" ];
+  hardware.nvidia.powerManagement.enable = true;
+  hardware.nvidia.nvidiaSettings = true;
+  hardware.nvidia.prime = {
+    offload = {
+      enable = lib.mkOverride 990 true;
+      enableOffloadCmd = lib.mkIf config.hardware.nvidia.prime.offload.enable true; # Provides `nvidia-offload` command.
+    };
+    # Hardware should specify the bus ID for intel/nvidia devices
+    intelBusId = "PCI:0:2:0";
+    nvidiaBusId = "PCI:1:0:0";
+  };
   hardware.opengl.extraPackages = with pkgs; [
     vaapiVdpau
   ];
-  hardware.nvidia.powerManagement.enable = true;
-  hardware.nvidia.nvidiaSettings = true;
-
-  services.xserver.config = ''
-    # Integrated Intel GPU
-    Section "Device"
-      Identifier "iGPU"
-      Driver "modesetting"
-    EndSection
-
-    # Dedicated NVIDIA GPU
-    Section "Device"
-      Identifier "dGPU"
-      Driver "nvidia"
-    EndSection
-
-    Section "ServerLayout"
-      Identifier "layout"
-      Screen 0 "iGPU"
-    EndSection
-
-    Section "Screen"
-      Identifier "iGPU"
-      Device "iGPU"
-    EndSection
-  '';
 }

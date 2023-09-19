@@ -14,7 +14,6 @@ in
   specialisation."GPUPaththrough".configuration = {
     system.nixos.tags = [
       "Nvidia-GPU-VFIO"
-      # "NoXpad"
     ];
 
     # The vfio modules before the nvidia modules is very intentional because it lets vfio claim my GPU before nvidia does.
@@ -24,7 +23,7 @@ in
       "vfio"
       "vfio_iommu_type1"
       # Built into kernel at linux 6.2
-      # "vfio_virqfd"
+      "vfio_virqfd"
       # If you load nvidia driver in initrd, you need specific vfio load before nvidia driver
       # "nvidia"
       # "nvidia_modeset"
@@ -34,30 +33,5 @@ in
     boot.kernelParams = [
       ("vfio-pci.ids=" + lib.concatStringsSep "," gpuIDs) # vfio devices
     ];
-
-    boot.initrd.availableKernelModules = [ "i915" "vfio-pci" ];
-    boot.initrd.preDeviceCommands = ''
-      DEVS="0000:01:00.0 0000:01:00.1"
-      for DEV in $DEVS; do
-        echo "vfio-pci" > /sys/bus/pci/devices/$DEV/driver_override
-      done
-      modprobe -i vfio-pci
-    '';
-
-    boot.blacklistedKernelModules = [
-      # "nvidia"
-      "nouveau"
-    ];
-
-    # Xpad affects the work of the xbox controller and its wireless adapter
-    # The xpad will shake hands with the handle/wireless adapter when it is plugged in. At this time, 
-    # if you pass the usb device directly to the virtual machine, the xbox handle will not re-handshake with the root of windows,
-    # which will eventually cause it to fail to work.
-    # I can't find a way to make the usb device passthrough into the virtual machine from before/when it is plugged in,
-    # so I suggest you disable this driver if you need to use the gamepad in virtual machine
-
-    # Now using libvirt hooks to unload xpad dynamicly
-    # boot.blacklistedKernelModules = [ "xpad" ];
-
   };
 }
