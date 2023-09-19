@@ -13,7 +13,7 @@ in
 {
   specialisation."GPUPaththrough".configuration = {
     system.nixos.tags = [
-      "Nvidia-GPU-VFIO"
+      "Nvidia-VFIO"
     ];
 
     # The vfio modules before the nvidia modules is very intentional because it lets vfio claim my GPU before nvidia does.

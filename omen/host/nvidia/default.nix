@@ -2,10 +2,10 @@
 {
   imports = [
     # ./disable.nix
-    # ./open.nix
   ];
 
   services.xserver.videoDrivers = lib.mkDefault [ "nvidia" ];
+  hardware.nvidia.open = true;
   hardware.nvidia.powerManagement.enable = true;
   hardware.nvidia.nvidiaSettings = true;
   hardware.nvidia.prime = {
