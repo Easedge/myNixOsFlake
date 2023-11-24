@@ -28,6 +28,8 @@
 
     docker = {
       enable = true;
+      storageDriver = "btrfs";
+      extraOptions = "";
     };
 
     # virtualbox = {
@@ -57,5 +59,6 @@
     virt-manager
     virt-viewer
     swtpm
+    docker-compose
   ];
 }
