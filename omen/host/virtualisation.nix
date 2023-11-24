@@ -29,7 +29,6 @@
     docker = {
       enable = true;
       storageDriver = "btrfs";
-      extraOptions = "";
     };
 
     # virtualbox = {
