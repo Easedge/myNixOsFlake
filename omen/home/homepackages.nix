@@ -24,6 +24,7 @@
     element-desktop
     spotify
     # libreoffice-qt
+    onlyoffice-bin
     obs-studio
     gimp
     # bottles
