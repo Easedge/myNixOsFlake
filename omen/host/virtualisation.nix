@@ -8,7 +8,7 @@
       qemu.ovmf.enable = true;
       qemu.ovmf.packages = [ (pkgs.OVMF.override { csmSupport = false; }).fd ];
       qemu.swtpm.enable = true;
-      qemu.runAsRoot = false;
+      qemu.runAsRoot = true;
       qemu.package = pkgs.qemu_kvm;
       qemu.verbatimConfig = ''
         nvram = [ "${pkgs.OVMF}/FV/OVMF.fd:${pkgs.OVMF}/FV/OVMF_VARS.fd" ]
