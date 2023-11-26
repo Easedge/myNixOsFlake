@@ -64,8 +64,8 @@
             hardware.nixosModules.common-pc-laptop
             hardware.nixosModules.common-pc-ssd
 
-            # daeuniverse.nixosModules.dae
-            # daeuniverse.nixosModules.daed
+            daeuniverse.nixosModules.dae
+            daeuniverse.nixosModules.daed
           ];
         };
       };
