@@ -57,28 +57,30 @@
             # > Our main nixos configuration file <
             ./omen/host/configuration.nix
 
+            home-manager.nixosModules.home-manager
+
             hardware.nixosModules.common-cpu-intel
             hardware.nixosModules.common-gpu-intel
             hardware.nixosModules.common-pc-laptop
             hardware.nixosModules.common-pc-ssd
 
-            daeuniverse.nixosModules.dae
-            daeuniverse.nixosModules.daed
+            # daeuniverse.nixosModules.dae
+            # daeuniverse.nixosModules.daed
           ];
         };
       };
 
       # Standalone home-manager configuration entrypoint
       # Available through 'home-manager --flake .#your-username@your-hostname'
-      homeConfigurations = {
-        "junglefish@omen" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-          extraSpecialArgs = { inherit inputs outputs; };
-          modules = [
-            # > Our main home-manager configuration file <
-            ./omen/home/home.nix
-          ];
-        };
-      };
+      # homeConfigurations = {
+      #   "junglefish@omen" = home-manager.lib.homeManagerConfiguration {
+      #     pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+      #     extraSpecialArgs = { inherit inputs outputs; };
+      #     modules = [
+      #       # > Our main home-manager configuration file <
+      #       ./omen/home/home.nix
+      #     ];
+      #   };
+      # };
     };
 }
