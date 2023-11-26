@@ -11,6 +11,7 @@
     unrar
     unzip
     home-manager
+    appimage-run
     # system call monitoring
     strace # system call monitoring
     ltrace # library call monitoring
