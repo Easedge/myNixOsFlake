@@ -10,10 +10,10 @@
     # };
     extraConfig = {
       http = {
-        proxy = "socks5h://127.0.0.1:7890";
+        proxy = "socks5h://127.0.0.1:8080";
       };
       https = {
-        proxy = "socks5h://127.0.0.1:7890";
+        proxy = "socks5h://127.0.0.1:8080";
       };
     };
   };
