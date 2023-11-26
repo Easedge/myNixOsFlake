@@ -7,5 +7,6 @@
     ./git.nix
     ./neovim.nix
     ./tmux.nix
+    ./clash-verge.nix
   ];
 }
