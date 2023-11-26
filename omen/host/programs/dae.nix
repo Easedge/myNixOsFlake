@@ -4,7 +4,6 @@
   # with daed
   services.daed = {
     enable = true;
-    package = inputs.daeuniverse.packages.x86_64-linux.dae;
     configDir = "/etc/daed";
     listen = "0.0.0.0:2023";
     openFirewall = {
