@@ -55,8 +55,7 @@
   # };
 
   environment.systemPackages = with pkgs; [
-    virt-manager-qt
-    # virt-manager
+    virt-manager
     virt-viewer
     libguestfs
     guestfs-tools
