@@ -2,10 +2,10 @@
 {
   imports = [
     ./cuda.nix
-    ./dae.nix
+    # ./dae.nix
     # ./steam.nix
     # ./teamviewer.nix
     # ./clash-verge.nix
-    # ./sing-box.nix
+    ./sing-box.nix
   ];
 }
