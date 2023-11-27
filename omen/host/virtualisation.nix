@@ -55,9 +55,11 @@
   # };
 
   environment.systemPackages = with pkgs; [
-    virt-manager
+    virt-manager-qt
+    # virt-manager
     virt-viewer
     libguestfs
+    guestfs-tools
     swtpm
     docker-compose
   ];
