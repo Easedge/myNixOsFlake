@@ -58,6 +58,7 @@
     virt-manager
     virt-viewer
     libguestfs
+    python311Packages.guestfs
     swtpm
     docker-compose
   ];
