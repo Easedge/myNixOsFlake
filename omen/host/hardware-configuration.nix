@@ -12,6 +12,7 @@
   boot.kernelPatches = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = with config.boot.kernelPackages; [ ];
+  boot.extraModprobeConfig = "options kvm_intel nested=1";
 
   fileSystems."/" =
     {
