@@ -10,7 +10,7 @@
     p7zip
     unrar
     unzip
-    home-manager
+    # home-manager
     appimage-run
     # system call monitoring
     strace # system call monitoring
