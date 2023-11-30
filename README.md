@@ -10,7 +10,7 @@ $ sudo nixos-install --root /mnt --no-root-password --flake .#omen
 $ sudo nixos-rebuild switch --flake .#omen
 ```
 
-## Deprecated
+## deprecated
 ```sh
 $ home-manager switch --flake .#junglefish@omen
 ```
