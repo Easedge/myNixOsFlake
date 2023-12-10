@@ -29,8 +29,6 @@
     # mobile
     ifuse
     libimobiledevice
-    # command-line client for Nix binary cache
-    cachix
   ];
 
   programs.adb.enable = true;
