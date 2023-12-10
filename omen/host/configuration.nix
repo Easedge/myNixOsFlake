@@ -104,6 +104,7 @@
     settings = {
       experimental-features = "nix-command flakes";
       auto-optimise-store = true;
+      trusted-users = [ "root" "junglefish" ];
     };
     extraOptions = ''
       keep-outputs = true
