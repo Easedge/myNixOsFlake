@@ -1,4 +1,5 @@
-{ config, pkgs, ... }:
+{ lib, config, pkgs, ... }:
+
 {
   # nixpkgs.overlays = [
   #   (import (builtins.fetchTarball {
@@ -21,18 +22,12 @@
     # package = pkgs.emacs-unstable;
   };
 
-
-
-  environment.systemPackages = with pkgs; [
+  home.packages = with pkgs; [
     nodejs
     wmctrl
     xdotool
     aria
-  ];
-
-  with pkgs;
-  let
-  my-python-packages = python-packages: with python-packages; [
+  ] ++ (with python3Packages;[
     pandas
     requests
     sexpdata
@@ -49,12 +44,9 @@
     psutil # eaf-system-monitor
     retry # eaf-markdown-previewer
     markdown
-  ];
-  python-with-my-packages = python3.withPackages my-python-packages;
+  ]);
 
-
-
-  environment.variables = {
+  home.sessionVariables = {
     QT_QPA_PLATFORM_PLUGIN_PATH = "${pkgs.qt6.qtbase.outPath}/lib/qt-6/plugins";
   };
 }
