@@ -23,10 +23,12 @@
   };
 
   home.packages = with pkgs; [
+    pandoc
     nodejs
     wmctrl
     xdotool
     aria
+    python3
   ] ++ (with python3Packages;[
     pandas
     requests
