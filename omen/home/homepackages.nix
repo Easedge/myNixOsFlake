@@ -11,8 +11,7 @@
     fd
     ripgrep
     # code
-    # vscode-fhs
-    pkgs.stable.vscode-fhs
+    vscode-fhs
     # jetbrains.pycharm-community
     # jetbrains.idea-community
     nixpkgs-fmt
