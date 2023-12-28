@@ -19,6 +19,7 @@
     google-chrome
     firefox
     thunderbird
+    calibre
     qq
     telegram-desktop
     element-desktop
