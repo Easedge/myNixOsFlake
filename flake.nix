@@ -9,11 +9,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hardware.url = "github:nixos/nixos-hardware";
-    nur.url = "github:nix-community/NUR";
-    daeuniverse.url = "github:daeuniverse/flake.nix";
   };
 
-  outputs = { self, nixpkgs, home-manager, nur, hardware, daeuniverse, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, hardware, ... }@inputs:
     let
       inherit (self) outputs;
       forAllSystems = nixpkgs.lib.genAttrs [
@@ -64,23 +62,9 @@
             hardware.nixosModules.common-pc-laptop
             hardware.nixosModules.common-pc-ssd
 
-            daeuniverse.nixosModules.dae
-            daeuniverse.nixosModules.daed
           ];
         };
       };
 
-      # Standalone home-manager configuration entrypoint
-      # Available through 'home-manager --flake .#your-username@your-hostname'
-      # homeConfigurations = {
-      #   "junglefish@omen" = home-manager.lib.homeManagerConfiguration {
-      #     pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-      #     extraSpecialArgs = { inherit inputs outputs; };
-      #     modules = [
-      #       # > Our main home-manager configuration file <
-      #       ./omen/home/home.nix
-      #     ];
-      #   };
-      # };
     };
 }
