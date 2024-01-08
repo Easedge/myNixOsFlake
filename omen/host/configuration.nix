@@ -14,17 +14,28 @@
       ./gpu-pass
     ];
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.systemd-boot.consoleMode = "max";
-  boot.loader.systemd-boot.configurationLimit = 3;
+  # boot.loader.systemd-boot.enable = true;
+  # boot.loader.systemd-boot.consoleMode = "max";
+  # boot.loader.systemd-boot.configurationLimit = 3;
+
+  boot.loader.grub.enable = true;
+  boot.loader.grub.device = "nodev";
+  boot.loader.grub.default = "1"; # Select the second boot item, counting from 0
+  boot.loader.grub.configurationLimit = 3;
+  boot.loader.grub.efiSupport = true;
+  # boot.loader.grub.efiInstallAsRemovable = true; # in case canTouchEfiVariables doesn't work for your system
+  boot.loader.grub.useOSProber = true;
+
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
+  boot.supportedFilesystems = [ "ntfs" ];
 
   networking.hostName = "omen";
   networking.networkmanager.enable = true;
   networking.iproute2.enable = true;
 
   time.timeZone = "Asia/Shanghai";
+  # time.hardwareClockInLocalTime = true;
 
   i18n.defaultLocale = "zh_CN.UTF-8";
   i18n.supportedLocales = [ "zh_CN.UTF-8/UTF-8" "en_US.UTF-8/UTF-8" ];
