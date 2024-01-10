@@ -11,7 +11,7 @@
       ./desktop
       ./programs
       ./nvidia
-      ./gpu-pass
+      # ./gpu-pass
     ];
 
   # boot.loader.systemd-boot.enable = true;

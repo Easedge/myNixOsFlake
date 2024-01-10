@@ -14,7 +14,7 @@ let
 in
 { lib, ... }:
 {
-  specialisation."GPUPaththrough".configuration = {
+  specialisation."GPUPass".configuration = {
     system.nixos.tags = [
       "Nvidia-VFIO"
     ];
