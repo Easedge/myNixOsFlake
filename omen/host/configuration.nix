@@ -7,6 +7,7 @@
       ./systemservices.nix
       ./systempackages.nix
       ./shellsettings.nix
+      ./network.nix
       ./virtualisation.nix
       ./desktop
       ./programs
