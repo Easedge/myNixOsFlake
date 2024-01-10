@@ -24,6 +24,7 @@
     telegram-desktop
     element-desktop
     spotify
+    uxplay
     # libreoffice-qt
     onlyoffice-bin
     obs-studio
