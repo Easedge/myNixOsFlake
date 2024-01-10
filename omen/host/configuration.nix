@@ -20,7 +20,7 @@
 
   boot.loader.grub.enable = true;
   boot.loader.grub.device = "nodev";
-  boot.loader.grub.default = "1"; # Select the second boot item, counting from 0
+  boot.loader.grub.default = "0"; # Select the second boot item, counting from 0
   boot.loader.grub.configurationLimit = 3;
   boot.loader.grub.efiSupport = true;
   # boot.loader.grub.efiInstallAsRemovable = true; # in case canTouchEfiVariables doesn't work for your system

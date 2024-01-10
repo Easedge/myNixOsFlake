@@ -36,11 +36,21 @@
     jack.enable = true;
   };
 
+  services.avahi = {
+    enable = true;
+    nssmdns = true;
+    publish = {
+      enable = true;
+      addresses = true;
+      workstation = true;
+      userServices = true;
+    };
+  };
+
   hardware.bluetooth.enable = true;
   security.polkit.enable = true;
   services.fwupd.enable = true;
   services.openssh.enable = true;
-  services.avahi.enable = true;
   services.flatpak.enable = true;
   services.v2raya.enable = true;
 }
