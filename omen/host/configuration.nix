@@ -57,6 +57,7 @@
   users.users.junglefish = {
     isNormalUser = true;
     description = "junglefish";
+    # initialPassword = "admin";
     shell = pkgs.fish;
     extraGroups = [
       "wheel"

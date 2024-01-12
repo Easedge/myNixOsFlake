@@ -26,8 +26,8 @@
       fsType = "vfat";
     };
 
-  swapDevices =
-    [{ device = "/dev/disk/by-label/SWAP"; }];
+  # swapDevices =
+  #   [{ device = "/dev/disk/by-label/SWAP"; }];
 
   zramSwap.enable = true;
 
