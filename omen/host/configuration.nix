@@ -24,7 +24,7 @@
   boot.loader.grub.default = "0"; # Select the second boot item, counting from 0
   boot.loader.grub.configurationLimit = 3;
   boot.loader.grub.efiSupport = true;
-  # boot.loader.grub.efiInstallAsRemovable = true; # in case canTouchEfiVariables doesn't work for your system
+  boot.loader.grub.efiInstallAsRemovable = true; # in case canTouchEfiVariables doesn't work for your system
   boot.loader.grub.useOSProber = true;
 
   boot.loader.efi.canTouchEfiVariables = true;
