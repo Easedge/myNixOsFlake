@@ -31,10 +31,6 @@
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
   boot.supportedFilesystems = [ "ntfs" ];
 
-  networking.hostName = "omen";
-  networking.networkmanager.enable = true;
-  networking.iproute2.enable = true;
-
   time.timeZone = "Asia/Shanghai";
   # time.hardwareClockInLocalTime = true;
 
@@ -124,6 +120,7 @@
       keep-derivations = true
     '';
   };
+  
   system.stateVersion = "23.11";
 }
 
