@@ -22,6 +22,7 @@
     bridge-utils
     pciutils # lspci
     usbutils # lsusb
+    efibootmgr
     # complie
     gcc
     gdb
