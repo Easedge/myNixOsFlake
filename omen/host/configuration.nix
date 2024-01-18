@@ -64,7 +64,6 @@
       "lp"
       "kvm"
       "libvirtd"
-      "docker"
     ];
   };
 
