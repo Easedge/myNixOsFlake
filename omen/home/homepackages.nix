@@ -30,8 +30,5 @@
     obs-studio
     gimp
     # bottles
-    # k8s
-    minikube
-    conntrack-tools
   ];
 }

@@ -42,17 +42,17 @@
     #   storageDriver = "btrfs";
     # };
 
-    cri-o = {
-      enable = true;
-      logLevel = "info";
-      runtime = "crun";
-      storageDriver = "btrfs";
-      extraPackages= [
-        pkgs.gvisor
-        pkgs.cni
-        pkgs.cni-plugins
-      ];
-    };
+    # cri-o = {
+    #   enable = true;
+    #   logLevel = "info";
+    #   runtime = "crun";
+    #   storageDriver = "btrfs";
+    #   extraPackages= [
+    #     pkgs.gvisor
+    #     pkgs.cni
+    #     pkgs.cni-plugins
+    #   ];
+    # };
 
     # virtualbox = {
     #   host.enable = true;
