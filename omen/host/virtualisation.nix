@@ -47,7 +47,11 @@
       logLevel = "info";
       runtime = "crun";
       storageDriver = "btrfs";
-      extraPackages= [];
+      extraPackages= [
+        pkgs.gvisor
+        pkgs.cni
+        pkgs.cni-plugins
+      ];
     };
 
     # virtualbox = {
