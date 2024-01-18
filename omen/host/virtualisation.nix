@@ -68,6 +68,8 @@
     libguestfs
     guestfs-tools
     swtpm
+    skopeo
+    buildah
     podman-desktop
     podman-compose
     # docker-compose
