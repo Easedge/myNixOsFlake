@@ -47,9 +47,7 @@
       logLevel = "info";
       runtime = "crun";
       storageDriver = "btrfs";
-      settings =
-        ();
-          extraPackages= [];
+      extraPackages= [];
     };
 
     # virtualbox = {
