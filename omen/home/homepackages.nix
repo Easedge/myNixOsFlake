@@ -32,5 +32,6 @@
     # bottles
     # k8s
     minikube
+    conntrack-tools
   ];
 }
