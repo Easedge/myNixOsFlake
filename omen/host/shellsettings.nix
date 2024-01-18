@@ -1,17 +1,34 @@
 { lib, config, pkgs, ... }:
 
 {
-  programs.fish = {
+  # programs.fish = {
+  #   enable = true;
+  #   vendor.functions.enable = true;
+  #   shellInit = ''
+  #     direnv hook fish | source
+  #   '';
+  #   promptInit = "set -g direnv_fish_mode eval_on_arrow";
+  #   shellAliases = {
+  #     emc = "emacsclient";
+  #   };
+  # };
+
+  programs.bash = {
     enable = true;
-    vendor.functions.enable = true;
+    enableLsColors = true;
+    enableCompletion = true;
+    blesh.enable = true;
     shellInit = ''
-      direnv hook fish | source
+      eval "$(direnv hook bash)"
     '';
-    promptInit = "set -g direnv_fish_mode eval_on_arrow";
+    promptInit = "";
     shellAliases = {
       emc = "emacsclient";
     };
   };
 
-  environment.shells = [ pkgs.bashInteractive pkgs.fish ];
+  environment.shells = [
+    pkgs.bashInteractive
+    # pkgs.fish
+  ];
 }

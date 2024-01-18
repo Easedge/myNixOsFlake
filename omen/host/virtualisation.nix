@@ -19,16 +19,37 @@
 
     spiceUSBRedirection.enable = true;
 
-    oci-containers.backend = "docker";
+    oci-containers.backend = "podman";
 
-    # podman = {
+    podman = {
+      enable = true;
+      autoPrune.enable = false;
+      autoPrune.flags = [ ];
+      autoPrune.dates = "";
+      defaultNetwork.settings = { };
+      networkSocket = {
+        enable = false; 
+        openFirewall = false;
+      };
+      extraPackages = [ ];
+      enableNvidia = false;
+      dockerSocket.enable = false;
+      dockerCompat = false;
+    };
+
+    # docker = {
     #   enable = true;
-    #   dockerCompat = true;
+    #   storageDriver = "btrfs";
     # };
 
-    docker = {
+    cri-o = {
       enable = true;
+      logLevel = "info";
+      runtime = "crun";
       storageDriver = "btrfs";
+      settings =
+        ();
+          extraPackages= [];
     };
 
     # virtualbox = {
@@ -38,22 +59,6 @@
 
   };
 
-  # systemd.tmpfiles.rules = [
-  #   "f /dev/shm/scream 0660 junglefish qemu-libvirtd -"
-  #   "f /dev/shm/looking-glass 0660 junglefish qemu-libvirtd -"
-  # ];
-
-  # systemd.user.services.scream-ivshmem = {
-  #   enable = true;
-  #   description = "Scream IVSHMEM";
-  #   serviceConfig = {
-  #     ExecStart = "${pkgs.scream-receivers}/bin/scream-ivshmem-pulse /dev/shm/scream";
-  #     Restart = "always";
-  #   };
-  #   wantedBy = [ "multi-user.target" ];
-  #   requires = [ "pulseaudio.service" ];
-  # };
-
   environment.systemPackages = with pkgs; [
     virt-manager
     virt-viewer
@@ -61,6 +66,9 @@
     libguestfs
     guestfs-tools
     swtpm
-    docker-compose
+    podman-desktop
+    podman-compose
+    # docker-compose
+    distrobox
   ];
 }

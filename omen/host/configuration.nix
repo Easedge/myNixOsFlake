@@ -54,7 +54,7 @@
     isNormalUser = true;
     description = "junglefish";
     # initialPassword = "admin";
-    shell = pkgs.fish;
+    shell = pkgs.bashInteractive;
     extraGroups = [
       "wheel"
       "tty"
@@ -120,7 +120,7 @@
       keep-derivations = true
     '';
   };
-  
+
   system.stateVersion = "23.11";
 }
 
