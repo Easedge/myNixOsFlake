@@ -20,6 +20,9 @@
     shellInit = ''
       eval "$(direnv hook bash)"
     '';
+    interactiveShellInit = ''
+      eval "$(direnv hook bash)"
+    '';
     promptInit = ''
       if [ -n "$BASH_VERSION" ]; then
         export PS1='\[\e[38;5;135m\]\u\[\e[0m\]@\[\e[38;5;166m\]\h\[\e[0m\] \[\e[38;5;118m\]\w\[\e[0m\] \$ '
