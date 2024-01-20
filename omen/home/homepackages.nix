@@ -17,7 +17,8 @@
     nixpkgs-fmt
     # common desktop software
     google-chrome
-    firefox
+    # firefox
+    firefox-esr
     thunderbird
     calibre
     qq
