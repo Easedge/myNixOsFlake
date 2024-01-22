@@ -8,6 +8,10 @@
 
   environment.systemPackages = with pkgs; [
     layan-kde
+    clinfo
+    mesa-demos
+    vulkan-tools
+    wayland-utils
   ] ++ (with libsForQt5; [
     kcalc
     dragon
