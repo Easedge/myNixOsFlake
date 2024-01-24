@@ -25,8 +25,10 @@
   ];
 
   sound.enable = true;
-  hardware.pulseaudio.enable = false;
+  
+  security.polkit.enable = true;
   security.rtkit.enable = true;
+
   services.pipewire = {
     enable = true;
     audio.enable = true;
@@ -47,8 +49,6 @@
     };
   };
 
-  hardware.bluetooth.enable = true;
-  security.polkit.enable = true;
   services.fwupd.enable = true;
   services.openssh.enable = true;
   services.flatpak.enable = true;
