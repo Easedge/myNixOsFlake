@@ -15,6 +15,10 @@
     # jetbrains.pycharm-community
     # jetbrains.idea-community
     nixpkgs-fmt
+    ccls
+    jdt-language-server
+    gopls
+    rust-analyzer
     # common desktop software
     google-chrome
     # firefox
