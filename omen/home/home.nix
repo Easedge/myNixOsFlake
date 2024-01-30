@@ -4,6 +4,7 @@
   imports = [
     ./homepackages.nix
     ./programs
+    inputs.nix-doom-emacs.hmModule
   ];
 
   nixpkgs = {
