@@ -10,11 +10,14 @@
     scrcpy
     fd
     ripgrep
+    fish
     # code
     vscode-fhs
     # jetbrains.pycharm-community
     # jetbrains.idea-community
     nixpkgs-fmt
+    cmake
+    libtool
     ccls
     jdt-language-server
     gopls
