@@ -11,6 +11,7 @@
     fd
     ripgrep
     # code
+    doom-emacs
     vscode-fhs
     # jetbrains.pycharm-community
     # jetbrains.idea-community

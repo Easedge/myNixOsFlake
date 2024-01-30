@@ -9,9 +9,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hardware.url = "github:nixos/nixos-hardware";
+    nix-doom-emacs.url = "github:nix-community/nix-doom-emacs";
   };
 
-  outputs = { self, nixpkgs, home-manager, hardware, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, hardware, nix-doom-emacs, ... }@inputs:
     let
       inherit (self) outputs;
       forAllSystems = nixpkgs.lib.genAttrs [
