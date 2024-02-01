@@ -27,6 +27,7 @@
     # firefox
     firefox-esr
     thunderbird
+    qbittorrent-qt5
     calibre
     qq
     telegram-desktop

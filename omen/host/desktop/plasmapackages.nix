@@ -15,7 +15,6 @@
   ] ++ (with libsForQt5; [
     kcalc
     dragon
-    ktorrent
     kirigami-addons
   ]);
 
