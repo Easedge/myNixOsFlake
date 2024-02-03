@@ -13,9 +13,11 @@
     vulkan-tools
     wayland-utils
   ] ++ (with libsForQt5; [
+    discover
     kcalc
     dragon
     kirigami-addons
+    kio-extras
   ]);
 
   environment.plasma5.excludePackages = with pkgs.libsForQt5; [
