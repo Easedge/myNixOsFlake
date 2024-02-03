@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  services.xserver.layout = "cn";
+  services.xserver.xkb.layout = "cn";
   services.xserver.excludePackages = [ pkgs.xterm ];
   services.xserver.libinput.enable = true;
   # services.xserver.libinput.touchpad = {
