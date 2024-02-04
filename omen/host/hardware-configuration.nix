@@ -43,6 +43,7 @@
   hardware.bluetooth.settings = {
     General = {
       Experimental = true;
+      DiscoverableTimeout = 0;
     };
   };
 }

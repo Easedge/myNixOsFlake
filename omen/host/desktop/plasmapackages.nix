@@ -14,6 +14,7 @@
     wayland-utils
   ] ++ (with libsForQt5; [
     discover
+    kate
     kcalc
     dragon
     kirigami-addons
