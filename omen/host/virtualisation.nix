@@ -6,7 +6,7 @@
     libvirtd = {
       enable = true;
       qemu.ovmf.enable = true;
-      qemu.ovmf.packages = [ (pkgs.OVMF.override { csmSupport = false; }).fd ];
+      qemu.ovmf.packages = [ pkgs.OVMF.fd ];
       qemu.swtpm.enable = true;
       qemu.runAsRoot = true;
       qemu.package = pkgs.qemu_kvm;
