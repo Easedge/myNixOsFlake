@@ -1,6 +1,7 @@
 { pkgs, ... }: 
 {
   imports = [
+    ./browser.nix
     ./direnv.nix
     ./emacs.nix
     ./fzf.nix
