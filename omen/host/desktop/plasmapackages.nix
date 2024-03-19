@@ -2,17 +2,17 @@
 
 {
   services.xserver.enable = true;
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true;
-  services.xserver.displayManager.defaultSession = "plasmawayland";
+
+  services.desktopManager.plasma6.enable = true;
+  services.xserver.displayManager.sddm.wayland.enable = true;
+  # services.xserver.displayManager.defaultSession = "plasma";
 
   environment.systemPackages = with pkgs; [
-    layan-kde
     clinfo
     mesa-demos
     vulkan-tools
     wayland-utils
-  ] ++ (with libsForQt5; [
+  ] ++ (with pkgs.kdePackages; [
     discover
     kate
     kcalc
@@ -21,13 +21,17 @@
     kio-extras
   ]);
 
-  environment.plasma5.excludePackages = with pkgs.libsForQt5; [
+  environment.plasma6.excludePackages = with pkgs.kdePackages; [
     khelpcenter
   ];
 
   programs.kdeconnect = {
     enable = true;
-    package = pkgs.plasma5Packages.kdeconnect-kde;
+  };
+
+  programs.chromium = {
+    enablePlasmaBrowserIntegration = true;
+    plasmaBrowserIntegrationPackage = pkgs.kdePackages.plasma-browser-integration;
   };
 
   programs.dconf.enable = true;
