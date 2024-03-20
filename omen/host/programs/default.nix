@@ -1,6 +1,7 @@
 { ... }:
 {
   imports = [
+    ./browser.nix
     ./cuda.nix
     # ./steam.nix
     # ./teamviewer.nix

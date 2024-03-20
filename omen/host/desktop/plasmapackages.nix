@@ -30,7 +30,6 @@
 
   programs.chromium = {
     enablePlasmaBrowserIntegration = true;
-    plasmaBrowserIntegrationPackage = pkgs.kdePackages.plasma-browser-integration;
   };
 
   programs.dconf.enable = true;

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ input, pkgs, ... }:
 {
   programs.chromium.enable = true;
 
