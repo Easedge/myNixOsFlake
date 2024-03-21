@@ -25,7 +25,7 @@
     # common desktop software
     google-chrome
     # firefox
-    # firefox-esr
+    firefox-esr
     thunderbird
     qbittorrent-qt5
     calibre

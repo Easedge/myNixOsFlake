@@ -24,8 +24,6 @@ in
       "vfio_pci"
       "vfio"
       "vfio_iommu_type1"
-      # Built into kernel at linux 6.2
-      "vfio_virqfd"
     ];
     boot.kernelParams = [
       ("vfio-pci.ids=" + lib.concatStringsSep "," gpuIDs) # vfio devices
