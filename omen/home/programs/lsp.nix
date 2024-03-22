@@ -18,6 +18,7 @@
   ] ++ (with python3Packages;[
     grip
     libxml2
+    python-lsp-server
     black
     pyflakes
     isort
