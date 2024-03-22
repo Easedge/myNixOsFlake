@@ -15,13 +15,9 @@
     vscode-fhs
     # jetbrains.pycharm-community
     # jetbrains.idea-community
-    nixpkgs-fmt
     cmake
     libtool
-    ccls
-    jdt-language-server
-    gopls
-    rust-analyzer
+    aspell
     # common desktop software
     google-chrome
     # firefox
