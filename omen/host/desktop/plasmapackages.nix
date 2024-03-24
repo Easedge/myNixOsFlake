@@ -37,4 +37,5 @@
 
   services.colord.enable = true;
   services.geoclue2.enable = true;
+  services.packagekit.enable = true;
 }

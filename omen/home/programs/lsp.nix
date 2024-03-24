@@ -9,6 +9,7 @@
     clang-tools
     glslang
     jdk
+    jdt-language-server
     pipenv
     gopls
     gomodifytags
@@ -24,6 +25,7 @@
     stylelint
   ] ++ (with python3Packages;[
     grip
+    python-lsp-server
     black
     pyflakes
     isort

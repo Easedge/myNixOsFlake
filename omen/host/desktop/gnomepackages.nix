@@ -32,4 +32,6 @@
     enable = true;
     package = pkgs.gnomeExtensions.gsconnect;
   };
+
+  services.packagekit.enable = true;
 }
