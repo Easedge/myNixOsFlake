@@ -25,7 +25,7 @@
   ];
 
   sound.enable = true;
-  
+
   security.polkit.enable = true;
   security.rtkit.enable = true;
 
@@ -53,4 +53,5 @@
   services.openssh.enable = true;
   services.flatpak.enable = true;
   services.v2raya.enable = true;
+  services.guix.enable = true;
 }
