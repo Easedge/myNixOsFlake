@@ -54,25 +54,16 @@
     #   ];
     # };
 
-    # virtualbox = {
-    #   host.enable = true;
-    #   host.enableExtensionPack = true;
-    # };
-
   };
 
   environment.systemPackages = with pkgs; [
     virt-manager
     virt-viewer
     virtiofsd
-    libguestfs
-    guestfs-tools
     swtpm
     skopeo
     buildah
-    podman-desktop
     podman-compose
     # docker-compose
-    distrobox
   ];
 }

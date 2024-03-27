@@ -3,6 +3,7 @@
   home.packages = with pkgs; [
     nixfmt
     nixpkgs-fmt
+    pandoc
     libxml2
     graphviz
     gnuplot
@@ -10,6 +11,7 @@
     glslang
     jdk
     jdt-language-server
+    python3
     pipenv
     gopls
     gomodifytags

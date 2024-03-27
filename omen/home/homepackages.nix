@@ -10,18 +10,21 @@
     scrcpy
     fd
     ripgrep
-    fish
+    # fish
     # code
     vscode-fhs
-    # jetbrains.pycharm-community
+    jetbrains.pycharm-community
     # jetbrains.idea-community
     cmake
     libtool
     aspell
+    aspellDicts.en
+    aspellDicts.en-science
+    aspellDicts.en-computers
     # common desktop software
     google-chrome
     # firefox
-    firefox-esr
+    # firefox-esr
     thunderbird
     qbittorrent-qt5
     calibre
