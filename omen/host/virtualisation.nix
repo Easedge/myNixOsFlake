@@ -19,28 +19,28 @@
 
     spiceUSBRedirection.enable = true;
 
-    oci-containers.backend = "podman";
+    oci-containers.backend = "docker";
 
-    podman = {
-      enable = true;
-      autoPrune.enable = false;
-      autoPrune.flags = [ ];
-      autoPrune.dates = "";
-      defaultNetwork.settings = { };
-      networkSocket = {
-        enable = false; 
-        openFirewall = false;
-      };
-      extraPackages = [ ];
-      enableNvidia = false;
-      dockerSocket.enable = false;
-      dockerCompat = false;
-    };
-
-    # docker = {
+    # podman = {
     #   enable = true;
-    #   storageDriver = "btrfs";
+    #   autoPrune.enable = false;
+    #   autoPrune.flags = [ ];
+    #   autoPrune.dates = "";
+    #   defaultNetwork.settings = { };
+    #   networkSocket = {
+    #     enable = false; 
+    #     openFirewall = false;
+    #   };
+    #   extraPackages = [ ];
+    #   enableNvidia = false;
+    #   dockerSocket.enable = false;
+    #   dockerCompat = false;
     # };
+
+    docker = {
+      enable = true;
+      storageDriver = "btrfs";
+    };
 
     # cri-o = {
     #   enable = true;
@@ -61,9 +61,9 @@
     virt-viewer
     virtiofsd
     swtpm
-    skopeo
-    buildah
-    podman-compose
-    # docker-compose
+    # skopeo
+    # buildah
+    # podman-compose
+    docker-compose
   ];
 }

@@ -8,6 +8,7 @@
       graphviz
       gnuplot
       clang-tools
+      cmake-language-server
       glslang
       jdk
       jdt-language-server
@@ -26,9 +27,17 @@
       shellcheck
       html-tidy
       stylelint
+      dockfmt
+      dockerfile-language-server-nodejs
+      texliveMedium
+      sqlite
+      wordnet
+      languagetool
+      librime
     ] ++ (with python3Packages; [
       grip
       python-lsp-server
+      jupyter
       black
       pyflakes
       isort
@@ -38,6 +47,6 @@
     ]);
 
   home.sessionVariables = {
-    GUIX_LOCPATH = "$HOME/.guix-profile/lib/locale";
+    # GUIX_PROFILE = "/home/junglefish/.config/guix/current";
   };
 }

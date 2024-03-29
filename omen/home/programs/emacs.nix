@@ -6,7 +6,9 @@
     package = pkgs.emacs-gtk;
     extraConfig = ''
     '';
-    # extraPackages = [];
+    extraPackages = [
+      pkgs.emacsPackages.vterm
+    ];
   };
 
   services.emacs = {

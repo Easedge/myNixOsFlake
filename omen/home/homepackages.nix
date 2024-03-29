@@ -16,7 +16,6 @@
     jetbrains.pycharm-community
     # jetbrains.idea-community
     cmake
-    libtool
     aspell
     aspellDicts.en
     aspellDicts.en-science
