@@ -33,7 +33,6 @@
       sqlite
       wordnet
       languagetool
-      librime
     ] ++ (with python3Packages; [
       grip
       python-lsp-server
