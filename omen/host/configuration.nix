@@ -64,6 +64,7 @@
       "video"
       "networkmanager"
       "lp"
+      "docker"
       "kvm"
       "libvirtd"
     ];
