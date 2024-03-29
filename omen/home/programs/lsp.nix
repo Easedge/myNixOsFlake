@@ -13,7 +13,6 @@
       jdk
       jdt-language-server
       python3
-      pyenv
       pipenv
       gopls
       gomodifytags
