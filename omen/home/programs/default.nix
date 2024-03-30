@@ -8,5 +8,6 @@
     ./lsp.nix
     ./neovim.nix
     ./tmux.nix
+    ./mail.nix
   ];
 }

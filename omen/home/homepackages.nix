@@ -28,7 +28,6 @@
     element-desktop
     spotify
     uxplay
-    wpsoffice-cn
     onlyoffice-bin
     obs-studio
     gimp

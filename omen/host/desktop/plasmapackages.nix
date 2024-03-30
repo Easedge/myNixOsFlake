@@ -15,9 +15,7 @@
     discover
     kate
     kcalc
-    kmail
     dragon
-    kirigami-addons
     kio-extras
   ]);
 
