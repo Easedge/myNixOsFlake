@@ -8,6 +8,7 @@
     htop
     sdcv
     scrcpy
+    imagemagick
     fd
     ripgrep
     # code
