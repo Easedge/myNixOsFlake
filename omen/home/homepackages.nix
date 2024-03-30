@@ -10,7 +10,6 @@
     scrcpy
     fd
     ripgrep
-    # fish
     # code
     vscode-fhs
     jetbrains.pycharm-community
@@ -22,9 +21,6 @@
     aspellDicts.en-computers
     # common desktop software
     google-chrome
-    # firefox
-    # firefox-esr
-    thunderbird
     qbittorrent-qt5
     calibre
     qq
@@ -32,7 +28,7 @@
     element-desktop
     spotify
     uxplay
-    # libreoffice-qt
+    wpsoffice-cn
     onlyoffice-bin
     obs-studio
     gimp
