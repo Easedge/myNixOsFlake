@@ -12,6 +12,7 @@
     unzip
     gnupg
     gnutls
+    fish
     # home-manager
     appimage-run
     # system call monitoring
