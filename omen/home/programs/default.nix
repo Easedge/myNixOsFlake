@@ -2,7 +2,6 @@
 {
   imports = [
     ./direnv.nix
-    ./emacs.nix
     ./fzf.nix
     ./git.nix
     ./lsp.nix

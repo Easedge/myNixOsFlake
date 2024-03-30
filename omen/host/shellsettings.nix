@@ -44,4 +44,5 @@
     pkgs.bashInteractive
     # pkgs.fish
   ];
+
 }

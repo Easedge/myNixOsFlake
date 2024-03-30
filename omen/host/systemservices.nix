@@ -4,23 +4,13 @@
   services.xserver.xkb.layout = "cn";
   services.xserver.excludePackages = [ pkgs.xterm ];
   services.xserver.libinput.enable = true;
-  # services.xserver.libinput.touchpad = {
-  #   horizontalScrolling = true;
-  #   naturalScrolling = true;
-  #   tapping = true;
-  #   tappingDragLock = false;
-  # };
   services.printing.enable = true;
 
   xdg.portal.enable = true;
-  xdg.portal.extraPortals = [
-    # pkgs.xdg-desktop-portal-gtk
-    # pkgs.libsForQt5.xdg-desktop-portal-kde
-  ];
+  xdg.portal.extraPortals = [ ];
   xdg.portal.xdgOpenUsePortal = true;
 
   services.udev.packages = with pkgs; [
-    # gnome.gnome-settings-daemon
     android-udev-rules
   ];
 
