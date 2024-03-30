@@ -15,6 +15,7 @@ in
         address = "${email}";
         userName = "${email}";
         flavor = "plain";
+        passwordCommand = "${pkgs.pass}/bin/pass outlook";
         imap = {
           host = "outlook.office365.com";
           port = 993;
