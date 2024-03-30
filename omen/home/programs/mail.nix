@@ -16,6 +16,8 @@ in
         userName = "${email}";
         primary = true;
         flavor = "plain";
+        # you have to first generate the gpg keys:
+        # sh -> gpg --full-gen-key
         passwordCommand = "${pkgs.pass}/bin/pass outlook";
         imap = {
           host = "outlook.office365.com";
