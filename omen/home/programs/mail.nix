@@ -8,12 +8,13 @@ let
 in
 {
   home.packages = with pkgs; [ mu isync pass mutt-wizard ];
-  home.accounts.email = {
+  accounts.email = {
     maildirBasePath = "${maildir}";
     accounts = {
-      UTD = {
+      junglefish = {
         address = "${email}";
         userName = "${email}";
+        primary = true;
         flavor = "plain";
         passwordCommand = "${pkgs.pass}/bin/pass outlook";
         imap = {
@@ -47,4 +48,4 @@ in
     };
   };
 
-};
+}
