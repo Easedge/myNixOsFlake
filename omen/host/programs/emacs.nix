@@ -1,9 +1,10 @@
 { lib, config, pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [
-    emacsPackages.vterm
-    emacsPackages.mu4e
+  environment.systemPackages = with pkgs.emacsPackages; [
+    vterm
+    mu4e
+    mu4e-alert
   ];
 
 
@@ -13,8 +14,8 @@
     package = pkgs.emacs-gtk;
   };
 
-  environment.pathsToLink = [
-    "/share/emacs/site-lisp/mu4e"
-  ];
+  # environment.pathsToLink = [
+  #   "/share/emacs/site-lisp/"
+  # ];
 
 }
