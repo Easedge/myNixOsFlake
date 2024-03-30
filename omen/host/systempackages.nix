@@ -10,6 +10,8 @@
     p7zip
     unrar
     unzip
+    gnupg
+    gnutls
     # home-manager
     appimage-run
     # system call monitoring
@@ -33,13 +35,9 @@
   ];
 
   programs.adb.enable = true;
-
-  services.usbmuxd = {
-    enable = true;
-    # package = pkgs.usbmuxd2;
-  };
-
+  programs.gnupg.agent.enable = true;
+  programs.gnupg.agent.enableSSHSupport = true;
   programs.nix-ld.enable = true;
-
   programs.mtr.enable = true;
+
 }

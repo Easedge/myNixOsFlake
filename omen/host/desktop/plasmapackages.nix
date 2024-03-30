@@ -13,9 +13,10 @@
     wayland-utils
   ] ++ (with pkgs.kdePackages; [
     discover
+    dragon
     kate
     kcalc
-    dragon
+    kwallet
     kio-extras
   ]);
 
