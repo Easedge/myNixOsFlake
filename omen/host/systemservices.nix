@@ -12,6 +12,7 @@
 
   services.udev.packages = with pkgs; [
     android-udev-rules
+    game-devices-udev-rules
   ];
 
   sound.enable = true;
