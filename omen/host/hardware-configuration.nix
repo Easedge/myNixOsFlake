@@ -36,6 +36,7 @@
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
   hardware.opengl.enable = true;
+  hardware.uinput.enable = true;
   hardware.steam-hardware.enable = true;
   hardware.pulseaudio.enable = false;
   hardware.bluetooth.enable = true; # enables support for Bluetooth
